@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<service serviceGroup="" cachable="false" cacheduration="" description="Get exchange information between two coins" endpoint="default" groupType="" id="marketinfo" passwordencrypted="false" security="public" type="jsonConnector" smscode="" smsenabled="false">
+    <service-config>
+        <config-param api-version="" appid="" name="preprocessorname" value=""/>
+        <config-param api-version="" appid="" name="postprocessorname" value=""/>
+        <config-param api-version="" appid="" name="preprocessorJS" value=""/>
+        <config-param api-version="" appid="" name="postprocessorJS" value=""/>
+        <config-param api-version="" appid="" name="kony_http_supported_methods" value="GET"/>
+        <config-param api-version="" appid="" name="frontend_url" value="marketinfo/{pair}"/>
+        <config-param api-version="" appid="" name="frontend_supported_method" value="GET"/>
+        <config-param api-version="" appid="" name="endpointUrl" value="https://shapeshift.io/marketinfo/$pair"/>
+        <config-param api-version="" appid="" name="ignorehttpproxy" value="true"/>
+        <config-param api-version="" appid="" name="http.method" value="GET"/>
+        <config-param api-version="" appid="" name="dataObjectName" value=""/>
+        <config-param api-version="" appid="" name="sockettimeout" value=""/>
+        <config-param api-version="" appid="" name="responseEncoding" value="UTF-8"/>
+        <config-param api-version="" appid="" name="isembedxmlpresent" value="false"/>
+        <config-param api-version="" appid="" name="retrycount" value="0"/>
+        <config-param api-version="" appid="" name="jsonpath" value="true"/>
+    </service-config>
+    <service-input passthrough="false">
+        <header datatype="" name="" passthrough="false"/>
+        <param datatype="string" defaultvalue="" description="" encode="true" format="None" formatvalue="" name="pair" order="" passnull="false" sms-name="" src="request" sourcevalue="" srcformatvalue="" target="request" targetdatatype="java.lang.String" testvalue="BTC_ETH" value="">
+            <accessType></accessType>
+        </param>
+        <stub-param value="{&#xA;  &quot;pair&quot;: &quot;BTC_LTC&quot;,&#xA;  &quot;rate&quot;: 106.89692274,&#xA;  &quot;minerFee&quot;: 0.00075,&#xA;  &quot;limit&quot;: 0.75769171,&#xA;  &quot;minimum&quot;: 0.00015154,&#xA;  &quot;maxLimit&quot;: 0.75769601&#xA;}"/>
+    </service-input>
+    <service-output passthrough="false">
+        <param datatype="collection" defaultvalue="" description="" encode="true" format="None" formatvalue="" name="exchangeInfo" order="" passnull="false" sms-name="" src="$" sourcevalue="" srcformatvalue="" target="response" targetdatatype="java.lang.String" testvalue="" value="">
+            <accessType></accessType>
+        </param>
+    </service-output>
+</service>

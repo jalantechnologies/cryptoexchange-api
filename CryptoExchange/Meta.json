@@ -1,0 +1,10 @@
+{
+  "icon" : "icon.png",
+  "subType" : "customapp",
+  "description" : "This app is created from Studio App CryptoExchange.\r\n",
+  "version" : "1.0",
+  "intSvcs" : [ {
+    "name" : "Shapeshift",
+    "version" : "1.0"
+  } ]
+}
